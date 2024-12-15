@@ -5,7 +5,7 @@ config_path = 'yolov3.cfg'
 classes_path = 'classes.txt'
 
 def main():
-    detector = ObjectDetection(model_path, config_path, classes_path)
+    detector = ObjectDetection(model_path, config_path, classes_path, use_gpu=True)  # Enable GPU if available
     detector.detect_objects_from_camera(window_width=800, window_height=600)  # Set desired window size
 
 if __name__ == "__main__":
